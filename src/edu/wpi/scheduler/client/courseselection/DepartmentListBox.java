@@ -42,7 +42,7 @@ public class DepartmentListBox extends ListBox {
 			new AcademicGroup("Science", "MA", "PH", "AS", "BB", "BCB", "CH", "CS", "ES", "GE", "DS", "IMGD", "MMS", "MPE", "NEU"),
 			new AcademicGroup("Engineering", "ECE", "RBE", "AREN", "BME", "CE", "CHE", "ME", "MFE", "MTE", "NSE", "OIE", "FP", "SYS", "AE"),
 			new AcademicGroup("Language", "GN", "AB", "CN", "EN", "ESL", "SP"),
-			new AcademicGroup("Humanities", "PY", "SOC", "AR", "HI", "HU", "MU", "RE", "TH"),
+			new AcademicGroup("Humanities", "PY", "SOC", "AR", "HI", "HU", "MU", "RE", "TH", "WR"),
 			new AcademicGroup("Social Science", "ECON", "SS", "PSY", "DEV", "ENV", "GOV", "INTL"),
 			new AcademicGroup("Business", "BUS", "ETR", "FIN", "MIS", "MKT", "OBC", "SD")
 			);
