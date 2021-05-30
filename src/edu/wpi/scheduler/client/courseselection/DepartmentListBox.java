@@ -39,11 +39,12 @@ public class DepartmentListBox extends ListBox {
 	private Map<Department, OptionElement> options = new HashMap<Department, OptionElement>();
 
 	private static final List<AcademicGroup> groups = Arrays.asList(
-			new AcademicGroup("Science", "MA", "PH", "AS", "BB", "BCB", "CH", "CS", "ES", "GE"),
-			new AcademicGroup("Engineering", "ECE", "RBE", "AREN", "BME", "CE", "CHE", "ME", "MFE", "MTE", "NSE", "OIE", "FP", "SYS"),
+			new AcademicGroup("Science", "MA", "PH", "AS", "BB", "BCB", "CH", "CS", "ES", "GE", "DS", "IMGD", "MMS", "MPE", "NEU"),
+			new AcademicGroup("Engineering", "ECE", "RBE", "AREN", "BME", "CE", "CHE", "ME", "MFE", "MTE", "NSE", "OIE", "FP", "SYS", "AE"),
 			new AcademicGroup("Language", "GN", "AB", "CN", "EN", "ESL", "SP"),
-			new AcademicGroup("Humanities", "PY", "SOC", "AR", "HI", "HU", "MU", "RE"),
-			new AcademicGroup("Social Science", "ECON", "SS", "PSY")
+			new AcademicGroup("Humanities", "PY", "SOC", "AR", "HI", "HU", "MU", "RE", "TH"),
+			new AcademicGroup("Social Science", "ECON", "SS", "PSY", "DEV", "ENV", "GOV", "INTL"),
+			new AcademicGroup("Business", "BUS", "ETR", "FIN", "MIS", "MKT", "OBC", "SD")
 			);
 
 	public DepartmentListBox(StudentSchedule studentSchedule) {

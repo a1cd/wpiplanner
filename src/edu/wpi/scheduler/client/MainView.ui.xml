@@ -28,7 +28,7 @@
 		<g:north size="50">
 			<g:DockLayoutPanel styleName='{style.topBar}'>
 				<g:west size="256">
-					<g:Label styleName='{style.headerTitle}'>Scheduler</g:Label>
+					<g:Label styleName='{style.headerTitle}'>Planner</g:Label>
 				</g:west>
 				<g:center>
 					<g:SimplePanel>
