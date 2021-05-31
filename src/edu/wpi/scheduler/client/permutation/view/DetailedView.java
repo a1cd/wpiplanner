@@ -64,8 +64,9 @@ public class DetailedView extends ScrollPanel implements PermutationSelectEventH
 		cellFormatter.setWidth(1, 0, "50%");
 		cellFormatter.setWidth(1, 1, "50%");
 		
-		String html = "<h3>" + section.course.toString() + "</h3>CRN: " + section.crn;
+		String html = "<h3>" + section.course.toString() + "</h3>Section(s): " + section.number;
 		html += "<br>Seats available: " + section.seatsAvailable + "/" + section.seats;
+		html += "<br>Waitlist spots occupied: " + section.actualWaitlist + "/" + section.maxWaitlist;
 
 		table.setHTML(0, 0, html);
 		table.setWidget(0, 1, dataGrid);
