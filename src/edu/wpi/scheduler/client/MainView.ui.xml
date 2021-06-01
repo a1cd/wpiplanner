@@ -18,9 +18,19 @@
 			background-color: #c41230;
 		}
 		
+		.topBarNoBottom {
+			background-color: #c41230;
+		}
+		
 		.headerTitle{
 			color: white;
-			font-size: 50px;
+			font-size: 36px;
+			font-family: Arial;
+		}
+		
+		.headerSubTitle{
+			color: white;
+			font-size: 12px;
 			font-family: Arial;
 		}
 		
@@ -33,11 +43,28 @@
 	<g:DockLayoutPanel ui:field="layoutPanel">
 		<g:north size="50">
 			<g:DockLayoutPanel styleName='{style.topBar}'>
-				<g:west size="256">
-					<g:Label styleName='{style.headerTitle}'>Planner</g:Label>
+				<g:west size="185">
+					<g:DockLayoutPanel styleName='{style.topBarNoBottom}'>
+						<g:north size="36">
+							<g:Label styleName='{style.headerTitle}'>Planner</g:Label>
+						</g:north>
+						<g:north size="14">
+							<g:Label styleName='{style.headerSubTitle}'>Fall 2021/(Spring 2022 TBA)</g:Label>
+						</g:north>
+					</g:DockLayoutPanel>
 				</g:west>
-				<g:west size="512">
-					<g:Label styleName='{style.authorLabel}'>Feedback and Bug Reports - Discord: Jmckeen#9470 - Reddit: u/Jmckeen8</g:Label>
+				<g:west size="150">
+					<g:DockLayoutPanel styleName='{style.topBarNoBottom}'>
+						<g:north size="14">
+							<g:Label styleName='{style.authorLabel}'>Feedback and Bug Reports</g:Label>
+						</g:north>
+						<g:north size="14">
+							<g:Label styleName='{style.authorLabel}'>Discord: Jmckeen#9470</g:Label>
+						</g:north>
+						<g:north size="14">
+							<g:Label styleName='{style.authorLabel}'>Reddit: u/Jmckeen8</g:Label>
+						</g:north>
+					</g:DockLayoutPanel>
 				</g:west>
 				<g:center>
 					<g:SimplePanel>
