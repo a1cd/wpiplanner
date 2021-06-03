@@ -142,6 +142,15 @@ public class SchedXMLParser {
 		period.endTime = new Time(node.getAttribute("ends"));
 		period.location = node.getAttribute("building")
 				+ node.getAttribute("room");
+		
+		period.seats = Integer.parseInt(node.getAttribute("seats"));
+		period.seatsAvailable = Integer.parseInt(node.getAttribute("availableseats"));
+		
+		period.actualWaitlist = Integer.parseInt(node.getAttribute("actual_waitlist"));
+		period.maxWaitlist = Integer.parseInt(node.getAttribute("max_waitlist"));
+		
+		period.specificSection = node.getAttribute("section");
+		
 
 		String days = node.getAttribute("days");
 

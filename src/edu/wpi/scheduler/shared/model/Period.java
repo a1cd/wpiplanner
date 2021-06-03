@@ -25,6 +25,17 @@ public class Period implements Serializable{
 	/** Location period is taught; e.g. FL320 */
 	public String location;
 	
+	/** Total seats for this section */
+	public int seats;
+	/** seats - numRegistered = seatsAvailable */
+	public int seatsAvailable;
+	
+	public int actualWaitlist;
+
+	public int maxWaitlist;
+	
+	public String specificSection;
+	
 	/**
 	 * Construct a period with a reference to the section it is apart of
 	 * @param section Section the period belongs to

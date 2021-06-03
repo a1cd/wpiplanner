@@ -17,6 +17,13 @@ public class PeriodDataGrid extends CellTable<Period> {
 		addColumn(new TextColumn<Period>() {
 			@Override
 			public String getValue(Period period) {
+				return period.specificSection;
+			}
+		}, "Section");
+		
+		addColumn(new TextColumn<Period>() {
+			@Override
+			public String getValue(Period period) {
 				return period.professor;
 			}
 		}, "Professor");
@@ -34,6 +41,20 @@ public class PeriodDataGrid extends CellTable<Period> {
 				return period.type;
 			}
 		}, "Type");
+		
+		addColumn(new TextColumn<Period>() {
+			@Override
+			public String getValue(Period period) {
+				return period.seatsAvailable + "/" + period.seats;
+			}
+		}, "Seats Available");
+		
+		addColumn(new TextColumn<Period>() {
+			@Override
+			public String getValue(Period period) {
+				return period.actualWaitlist + "/" + period.maxWaitlist;
+			}
+		}, "Waitlist Spots Occupied");
 
 		addColumn(new TextColumn<Period>() {
 			@Override

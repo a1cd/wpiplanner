@@ -34,8 +34,8 @@ public class PeriodItem extends FlowPanel implements ClickHandler {
 		this.period = period;
 		this.term = term;
 		
-		String personHTML = personIcon.getHTML() + " " + period.section.seatsAvailable + "/" + period.section.seats;
-		String waitlistHTML = clockIcon.getHTML() + " " + period.section.actualWaitlist + "/" + period.section.maxWaitlist;
+		String personHTML = personIcon.getHTML() + " " + period.seatsAvailable + "/" + period.seats;
+		String waitlistHTML = clockIcon.getHTML() + " " + period.actualWaitlist + "/" + period.maxWaitlist;
 		
 		title.setText(period.section.course.department.abbreviation + " " + period.section.course.number);
 		seats.setHTML(personHTML + " " + waitlistHTML);
