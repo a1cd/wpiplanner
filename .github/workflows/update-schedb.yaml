@@ -1,5 +1,7 @@
 name: update-schedb
-on: [push]
+on:
+    schedule:
+      - cron: "*/15 * * * *"
 jobs:
     update:
         runs-on: ubuntu-latest
