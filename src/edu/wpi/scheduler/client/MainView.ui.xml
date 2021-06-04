@@ -60,7 +60,7 @@
 						</g:north>
 					</g:DockLayoutPanel>
 				</g:west>
-				<g:west size="260">
+				<g:west size="270">
 					<g:DockLayoutPanel styleName='{style.topBarNoBottom}'>
 						<g:north size="12">
 							<g:Label styleName='{style.authorLabel}'>Feedback and Bug Reports:</g:Label>
