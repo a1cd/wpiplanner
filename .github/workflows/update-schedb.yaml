@@ -4,6 +4,9 @@ jobs:
     update:
         runs-on: ubuntu-latest
         steps:
+            - uses: szenius/set-timezone@v1.0
+              with:
+                timezoneLinux: "America/New_York"
             - uses: actions/checkout@v2
               with:
                 ref: gh-pages
