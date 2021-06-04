@@ -29,6 +29,13 @@ public class SchedXMLParser {
 			scheduleDB.departments.add(department);
 
 		}
+		NodeList sdblist = document.getElementsByTagName("schedb");
+		
+		
+		Element sdb = (Element) sdblist.item(0);
+		scheduleDB.generated = sdb.getAttribute("generated");
+		
+		
 
 		return scheduleDB;
 	}

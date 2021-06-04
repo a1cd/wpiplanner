@@ -38,6 +38,13 @@
 			color:white;
 			font-size: 12px;
 			font-family: Arial;
+			font-style: Italic;
+		}
+		
+		.updatedTimestamp{
+			color:white;
+			font-size: 12px;
+			font-family: Arial;
 		}
 	</ui:style>
 	<g:DockLayoutPanel ui:field="layoutPanel">
@@ -53,16 +60,19 @@
 						</g:north>
 					</g:DockLayoutPanel>
 				</g:west>
-				<g:west size="150">
+				<g:west size="260">
 					<g:DockLayoutPanel styleName='{style.topBarNoBottom}'>
-						<g:north size="14">
-							<g:Label styleName='{style.authorLabel}'>Feedback and Bug Reports</g:Label>
+						<g:north size="12">
+							<g:Label styleName='{style.authorLabel}'>Feedback and Bug Reports:</g:Label>
 						</g:north>
-						<g:north size="14">
+						<g:north size="12">
 							<g:Label styleName='{style.authorLabel}'>Discord: Jmckeen#9470</g:Label>
 						</g:north>
-						<g:north size="14">
+						<g:north size="12">
 							<g:Label styleName='{style.authorLabel}'>Reddit: u/Jmckeen8</g:Label>
+						</g:north>
+						<g:north size="12">
+							<g:Label ui:field='updatedLabel' styleName='{style.updatedTimestamp}'></g:Label>
 						</g:north>
 					</g:DockLayoutPanel>
 				</g:west>

@@ -16,6 +16,8 @@ public class ScheduleDB implements Serializable {
 	/** Data this DB was generated */
 	//public Date generated; // TODO live async schedDB updates
 	
+	public String generated;
+	
 	/**
 	 * Finds a section in the database by the the crn
 	 * @param crn The given course CRN

@@ -55,6 +55,6 @@ public class Scheduler implements EntryPoint {
 		StorageStudentSchedule.loadSchedule(studentSchedule);
 
 		RootPanel.get().clear();
-		RootPanel.get().add(new MainView(studentSchedule));
+		RootPanel.get().add(new MainView(studentSchedule, db));
 	}
 }
