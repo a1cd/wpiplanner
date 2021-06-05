@@ -1,0 +1,10 @@
+/build
+/classes
+*.class
+*~
+*/web-app/gwt
+*/web-app/WEB-INF/classes
+target
+.gwt
+gwt-unitCache
+/test-classes
