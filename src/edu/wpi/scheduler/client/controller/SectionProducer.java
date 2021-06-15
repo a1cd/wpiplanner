@@ -70,7 +70,8 @@ public class SectionProducer {
 
 		while (sectionIterator.hasNext()) {
 			Section section = sectionIterator.next();
-			if (section.getTerms().contains(term) && section.hasAvailableSats()) {
+			//if (section.getTerms().contains(term) && section.hasAvailableSats()) {
+			if (section.getTerms().contains(term)) {
 				sectionIterator.remove();
 				hasChange = true;
 			}
