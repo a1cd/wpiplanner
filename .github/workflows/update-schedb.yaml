@@ -12,7 +12,7 @@ jobs:
             - uses: actions/checkout@v2
               with:
                 ref: gh-pages
-            - run: wget https://courselistings.wpi.edu/assets/prod-data.json -O prod-data.json
+            - run: wget --timeout=300 https://courselistings.wpi.edu/assets/prod-data.json -O prod-data.json
             - uses: actions/setup-java@v2
               with:
                 distribution: 'adopt'
