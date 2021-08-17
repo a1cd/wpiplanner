@@ -8,7 +8,7 @@
 		}
 	</ui:style>
 	<g:SplitLayoutPanel>
-		<g:west size="400">
+		<g:west size="300">
 			<g:ScrollPanel>
 				<p:StudentCourseList ui:field="courseList" />
 			</g:ScrollPanel>
