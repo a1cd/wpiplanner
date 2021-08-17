@@ -68,7 +68,7 @@ public class PeriodDescriptionDialogBox extends DialogBox {
 		}
 
 		dockPanel.add(this.periodInfo, DockPanel.SOUTH);
-		dockPanel.add(new Label(section.course.description), DockPanel.CENTER);
+		dockPanel.add(new Label(section.description), DockPanel.CENTER);
 		
 		dockPanel.setCellVerticalAlignment(periodInfo, DockPanel.ALIGN_BOTTOM);
 		dockPanel.setWidth(dialogWidth);

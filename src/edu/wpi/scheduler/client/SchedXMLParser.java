@@ -115,6 +115,8 @@ public class SchedXMLParser {
 		
 		
 		section.note = node.getAttribute("note");
+		
+		section.description = node.getAttribute("sec_desc");
 
 		// TODO (Nican): Read term information (How is this working?!)
 		section.term = node.getAttribute("part-of-term");

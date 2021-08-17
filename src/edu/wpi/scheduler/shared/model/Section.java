@@ -37,6 +37,8 @@ public class Section implements Serializable {
 	public String note;
 	/** List of class periods; lecture, lab, etc */
 	public List<Period> periods = new ArrayList<Period>();
+	/** Course description for individual section */
+	public String description;
 
 	public int actualWaitlist;
 
