@@ -45,7 +45,8 @@ public class CourseList extends ComplexPanel {
 		for (Course course : department.courses) {
 			CourseListItemBase item = new CourseListItemBase(selectionController, course);
 
-			String name = fixCase(course.name);
+			//String name = fixCase(course.name);
+			String name = course.name;   //since courses in Workday already have proper case, we don't need to use fixCase()
 
 			if (!course.hasAvailableSeats()) {
 				name = NoSeatWarning + " " + name;

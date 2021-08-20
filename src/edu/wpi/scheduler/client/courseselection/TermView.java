@@ -36,6 +36,16 @@ public class TermView extends Widget {
 
 		return false;
 	}
+	
+	public boolean checkForSeats(Term term) {
+		for (Section section : course.sections) {
+			if (section.term.contains(term.name + " Term") && section.seatsAvailable>0) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
 
 	public Element addTerm(Term term) {
 		Element elem = DOM.createDiv();
@@ -56,14 +66,32 @@ public class TermView extends Widget {
 	protected void update(Term term, Element label) {
 		if (!hasTerm(term)) {
 			label.getStyle().setOpacity(0.2);
-		} else {
+		}else {
 			label.getStyle().setBackgroundColor("#DFFFDF");
 		}
 	}
+	
+	protected void updateLoad() {
+		for (Entry<Element, Term> entry : terms.entrySet()) {
+			updateLoad(entry.getValue(), entry.getKey());
+		}
+	}
+
+	protected void updateLoad(Term term, Element label) {
+		if (!hasTerm(term)) {
+			label.getStyle().setOpacity(0.2);
+		} else if(checkForSeats(term)) {
+			label.getStyle().setBackgroundColor("#DFFFDF");
+		}
+		else {
+			label.getStyle().setBackgroundColor("#FFBBBB");
+		}
+	}
+	
 
 	@Override
 	protected void onLoad() {
-		this.update();
+		this.updateLoad();
 	}
 
 
