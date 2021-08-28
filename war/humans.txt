@@ -1,0 +1,12 @@
+Based on the original WPI Scheduler project by:
+ - Henrique Polido
+ - Ryan Anthony
+ - Douglas Lally
+Source code: 
+ - https://github.com/Nican/wpischeduler
+
+Updated for compatibility with Workday schedule data by:
+ - Josh McKeen <jdmckeen@wpi.edu>
+Source code:
+ - https://github.com/Jmckeen8/wpiplanner
+ - https://github.com/Jmckeen8/WorkdayToPlannerConverter
