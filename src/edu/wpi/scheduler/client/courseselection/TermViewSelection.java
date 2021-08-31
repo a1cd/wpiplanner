@@ -10,6 +10,7 @@ import edu.wpi.scheduler.client.controller.StudentSchedule;
 import edu.wpi.scheduler.client.controller.StudentScheduleEvent;
 import edu.wpi.scheduler.client.controller.StudentScheduleEventHandler;
 import edu.wpi.scheduler.shared.model.Course;
+import edu.wpi.scheduler.shared.model.Section;
 import edu.wpi.scheduler.shared.model.Term;
 
 public class TermViewSelection extends TermView implements ClickHandler, StudentScheduleEventHandler {
@@ -66,11 +67,12 @@ public class TermViewSelection extends TermView implements ClickHandler, Student
 		}
 
 		SectionProducer producer = schedule.getSectionProducer(course);
-
+		
 		if (producer.isTermDenied(term))
 			producer.removeDenyTerm(term);
 		else
 			producer.denyTerm(term);
+		
 	}
 
 	@Override

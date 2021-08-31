@@ -70,13 +70,32 @@ public class Section implements Serializable {
 	public Section() {
 	}
 	
-	public boolean hasAvailableSats(){
+	public boolean hasAvailableSats() {
+		for (Period p:this.periods) {
+			if (p.isPeriodFilled()) {
+				return false;
+			}
+		}
+		return true;
+		
+		/*
 		if (seatsAvailable > 0) 
 			return true;
 		
 		if(seatsAvailable == 0 && seats == 0)
 			return true;
 		
-		return false;		
-	}	
+		return false;	
+		*/	
+	}
+	
+	public boolean hasAvailableWaitlist() {
+		for (Period p:this.periods) {
+			if (p.isPeriodWaitlistFilled()) {
+				return false;
+			}
+		}
+		//number+="<span style=\"color: blue; font-weight: bold;\" title=\"There are no seats left, but there is spots left on the waitlist.\">&#9888;</span>";
+		return true;
+	}
 }

@@ -5,6 +5,7 @@ import java.util.Comparator;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.regexp.shared.RegExp;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AbstractImagePrototype;
 import com.google.gwt.user.client.ui.ComplexPanel;
 import com.google.gwt.user.client.ui.WidgetCollection;
@@ -33,6 +34,7 @@ public class CourseList extends ComplexPanel {
 	public static final CourseComparator comparator = new CourseComparator();
 	
 	public static final String NoSeatWarning = "<span style=\"color: red; font-weight: bold;\" title=\"There are no seats left.\">&#9888;</span>";
+	public static final String NoSeatButWaitlistWarning = "<span style=\"color: blue; font-weight: bold;\" title=\"There are no seats left, but there are spots left on the waitlist.\">&#9888;</span>";
 
 	public CourseList(CourseSelectionController selectionController) {
 		this.setElement(Document.get().createTableElement());
@@ -45,16 +47,15 @@ public class CourseList extends ComplexPanel {
 		for (Course course : department.courses) {
 			CourseListItemBase item = new CourseListItemBase(selectionController, course);
 
-			//String name = fixCase(course.name);
-			String name = course.name;   //since courses in Workday already have proper case, we don't need to use fixCase()
+			String name = fixCase(course.name);
 
 			if (!course.hasAvailableSeats()) {
-				name = NoSeatWarning + " " + name;
+				if (course.hasAvailableWaitlist()) name = NoSeatButWaitlistWarning + " " + name;
+				else name = NoSeatWarning + " " + name;
 			}
 
 			item.add("128px", new TermView(course));
 			item.add(null, name);
-			// item.add(null, course.sections.get(0).term);
 
 			this.add(item);
 		}

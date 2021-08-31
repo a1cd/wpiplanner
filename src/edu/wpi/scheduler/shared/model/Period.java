@@ -48,4 +48,13 @@ public class Period implements Serializable{
 	 * Default period constructor
 	 */
 	public Period(){}
+	
+	public boolean isPeriodFilled() {
+		return this.seatsAvailable <= 0;
+	}
+
+	public boolean isPeriodWaitlistFilled() {
+		return actualWaitlist == maxWaitlist;
+	}
+	
 }

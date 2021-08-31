@@ -45,10 +45,10 @@ public class TabList extends Composite{
 		courseSelection = new CourseSelectionTab(studentSchedule);
 		timeChooser = new TimeTab(studentSchedule);
 		
-		//addTab( welcome );
 		addTab( courseSelection  );
+		addTab( welcome );
 		addTab( timeChooser );
-		addTab( new PermutationTab(studentSchedule)  );		
+		addTab( new PermutationTab(studentSchedule));
 	}
 	
 	public Widget getHomeView(){

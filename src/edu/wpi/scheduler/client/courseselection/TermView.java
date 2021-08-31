@@ -25,6 +25,7 @@ public class TermView extends Widget {
 			this.addTerm(term);
 
 		this.setStyleName("termView");
+		
 	}
 
 	public boolean hasTerm(Term term) {
@@ -36,16 +37,6 @@ public class TermView extends Widget {
 
 		return false;
 	}
-	
-	public boolean checkForSeats(Term term) {
-		for (Section section : course.sections) {
-			if (section.term.contains(term.name + " Term") && section.seatsAvailable>0) {
-				return true;
-			}
-		}
-		
-		return false;
-	}
 
 	public Element addTerm(Term term) {
 		Element elem = DOM.createDiv();
@@ -53,7 +44,9 @@ public class TermView extends Widget {
 		
 		getElement().appendChild(elem);
 		terms.put(elem, term);
-
+		
+		//#FFBBBB red
+		//#DFFFDF green
 		return elem;
 	}
 
@@ -66,32 +59,18 @@ public class TermView extends Widget {
 	protected void update(Term term, Element label) {
 		if (!hasTerm(term)) {
 			label.getStyle().setOpacity(0.2);
-		}else {
-			label.getStyle().setBackgroundColor("#DFFFDF");
-		}
-	}
-	
-	protected void updateLoad() {
-		for (Entry<Element, Term> entry : terms.entrySet()) {
-			updateLoad(entry.getValue(), entry.getKey());
-		}
-	}
-
-	protected void updateLoad(Term term, Element label) {
-		if (!hasTerm(term)) {
-			label.getStyle().setOpacity(0.2);
-		} else if(checkForSeats(term)) {
-			label.getStyle().setBackgroundColor("#DFFFDF");
-		}
+		} 
 		else {
-			label.getStyle().setBackgroundColor("#FFBBBB");
+			if (course.hasAvailableSeatsForTerm(term.name)) label.getStyle().setBackgroundColor("#DFFFDF");
+			else if (course.hasAvailableWaitlistForTerm(term.name)) label.getStyle().setBackgroundColor("#ccccff");
+			else label.getStyle().setBackgroundColor("#fce2b1");
+			//term.name is something such as "A" while section is "A Term, B Term", etc.
 		}
 	}
-	
 
 	@Override
 	protected void onLoad() {
-		this.updateLoad();
+		this.update();
 	}
 
 
