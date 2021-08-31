@@ -59,11 +59,21 @@ public class TermView extends Widget {
 	protected void update(Term term, Element label) {
 		if (!hasTerm(term)) {
 			label.getStyle().setOpacity(0.2);
+			label.setTitle("Course not offered during "+term.name+" Term.");
 		} 
 		else {
-			if (course.hasAvailableSeatsForTerm(term.name)) label.getStyle().setBackgroundColor("#DFFFDF");
-			else if (course.hasAvailableWaitlistForTerm(term.name)) label.getStyle().setBackgroundColor("#ccccff");
-			else label.getStyle().setBackgroundColor("#fce2b1");
+			if (course.hasAvailableSeatsForTerm(term.name)) {
+				label.getStyle().setBackgroundColor("#DFFFDF");
+				label.setTitle("Seats available during "+term.name+" Term.");
+			}
+			else if (course.hasAvailableWaitlistForTerm(term.name)) {
+				label.getStyle().setBackgroundColor("#ccccff");
+				label.setTitle("There are no seats left, but there are spots left on the waitlist during "+term.name+" Term.");
+			}
+			else {
+				label.getStyle().setBackgroundColor("#fce2b1");
+				label.setTitle("There are no seats left during "+term.name+" Term.");
+			}
 			//term.name is something such as "A" while section is "A Term, B Term", etc.
 		}
 	}

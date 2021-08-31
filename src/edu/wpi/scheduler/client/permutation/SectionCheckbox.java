@@ -22,8 +22,10 @@ public class SectionCheckbox extends CheckBox implements StudentScheduleEventHan
 		
 		String html = section.number;
 		
-		if(!section.hasAvailableSats())
-			html += " " + CourseList.NoSeatWarning;
+		if (!section.hasAvailableSats()) {
+			if (section.hasAvailableWaitlist()) html += " " + CourseList.NoSeatButWaitlistWarning;
+			else html += " " + CourseList.NoSeatWarning;
+		}
 		
 		setHTML(html);
 		addValueChangeHandler(this);

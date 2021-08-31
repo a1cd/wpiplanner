@@ -14,12 +14,13 @@ public class PeriodDataGrid extends CellTable<Period> {
 		
 		getElement().getStyle().setWidth(100.0, Unit.PCT);
 
+		/*
 		addColumn(new TextColumn<Period>() {
 			@Override
 			public String getValue(Period period) {
 				return period.specificSection;
 			}
-		}, "Section");
+		}, "Section");*/
 		
 		addColumn(new TextColumn<Period>() {
 			@Override

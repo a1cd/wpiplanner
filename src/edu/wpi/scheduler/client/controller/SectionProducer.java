@@ -18,13 +18,12 @@ public class SectionProducer {
 	public SectionProducer(StudentSchedule schedule, Course course) {
 		this.schedule = schedule;
 		this.course = course;
-		/*
 		for (Section section : this.course.sections) {
 			if (!section.hasAvailableSats()) {
 				deniedSections.add(section);
 			}
 		}
-		*/
+		
 	}
 
 	public Course getCourse() {

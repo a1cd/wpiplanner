@@ -34,7 +34,7 @@ public class PeriodDescriptionDialogBox extends DialogBox {
 	public final Label title = new Label();
 	public final FlowPanel conflictList = new FlowPanel();
 	
-	public static final String dialogWidth = "800px";
+	public static final String dialogWidth = "1000px";
 
 	public PeriodDescriptionDialogBox(PermutationController controller, Section section) {
 		super(true, true, new TitleCheckbox(controller.getStudentSchedule(), section));
