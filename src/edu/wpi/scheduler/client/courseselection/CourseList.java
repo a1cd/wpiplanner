@@ -47,7 +47,8 @@ public class CourseList extends ComplexPanel {
 		for (Course course : department.courses) {
 			CourseListItemBase item = new CourseListItemBase(selectionController, course);
 
-			String name = fixCase(course.name);
+			//String name = fixCase(course.name);  Capitalization handled by Workday now. 
+			String name = course.name;
 
 			if (!course.hasAvailableSeats()) {
 				if (course.hasAvailableWaitlist()) name = NoSeatButWaitlistWarning + " " + name;
