@@ -63,13 +63,13 @@
 				<g:west size="270">
 					<g:DockLayoutPanel styleName='{style.topBarNoBottom}'>
 						<g:north size="12">
-							<g:Label styleName='{style.authorLabel}'>Feedback and Bug Reports:</g:Label>
+							<g:Label styleName='{style.authorLabel}'></g:Label>
 						</g:north>
 						<g:north size="12">
-							<g:Label styleName='{style.authorLabel}'>Discord: Jmckeen#9470</g:Label>
+							<g:Label styleName='{style.authorLabel}'></g:Label>
 						</g:north>
 						<g:north size="12">
-							<g:Label styleName='{style.authorLabel}'>Reddit: u/Jmckeen8</g:Label>
+							<g:Label styleName='{style.authorLabel}'></g:Label>
 						</g:north>
 						<g:north size="12">
 							<g:Label ui:field='updatedLabel' styleName='{style.updatedTimestamp}'></g:Label>
