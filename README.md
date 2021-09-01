@@ -13,10 +13,11 @@ The live version of the planner can be found at [jmckeen8.github.io/wpiplanner/]
 The data provided by the JSON feed is converted to the XML format desired by the Planner application using a converter application I've written, which has its own repository [here](https://github.com/Jmckeen8/WorkdayToPlannerConverter). Other minor modifications have been made to the Planner application itself, namely to show seat totals by course component when viewing schedules instead of showing a single set of seat totals for an entire section.
 
 Questions/Feedback/Bug Reports:
-Josh:
+Josh:  
 Email: jdmckeen@wpi.edu  
 Discord: Jmckeen#9470  
 Reddit: u/Jmckeen8  
-
-Nick: nmmarkou@wpi.edu
-Discord: nMM456#9212
+  
+Nick:  
+Email: nmmarkou@wpi.edu  
+Discord: nMM456#9212  
