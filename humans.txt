@@ -7,6 +7,9 @@ Source code:
 
 Updated for compatibility with Workday schedule data by:
  - Josh McKeen <jdmckeen@wpi.edu>
+ - Nick Markou <nmmarkou@wpi.edu>
 Source code:
  - https://github.com/Jmckeen8/wpiplanner
  - https://github.com/Jmckeen8/WorkdayToPlannerConverter
+
+In collaboration with the WPI IT Web Development Team for providing official hosting.
