@@ -1,5 +1,7 @@
 # WPI Planner for Workday Schedules
 
+For implementation: use contents of the "war" folder
+
 Based on the WPI Scheduler IQP application written by: Henrique "Nican" Polido, Ryan Anthony, Douglas Lally
 
 Modifications by: Josh McKeen and Nick Markou
