@@ -16,7 +16,7 @@ public class ShareWidget extends ComplexPanel {
 		getElement().getStyle().setWidth(200, Unit.PX);
 		
 		TextBox textbox = new TextBox();
-		textbox.setValue(Document.get().getURL() + "#share/" + StorageSharing.getShareCode(permutation));
+		textbox.setValue(Document.get().getURL() + "?share=" + StorageSharing.getShareCode(permutation));
 		textbox.getElement().getStyle().setWidth(95, Unit.PCT);
 		
 		add(textbox, getElement());
