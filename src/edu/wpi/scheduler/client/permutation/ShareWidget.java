@@ -16,7 +16,15 @@ public class ShareWidget extends ComplexPanel {
 		getElement().getStyle().setWidth(200, Unit.PX);
 		
 		TextBox textbox = new TextBox();
-		textbox.setValue(Document.get().getURL() + "?share=" + StorageSharing.getShareCode(permutation));
+		String currentURL = Document.get().getURL();
+		
+		//check to see if an old share code is already in the URL. If so, strip it out to replace with new share code
+		if(currentURL.contains("?share=")) {
+			textbox.setValue(currentURL.substring(0, currentURL.indexOf("?")) + "?share=" + StorageSharing.getShareCode(permutation));
+		}else {
+			textbox.setValue(currentURL + "?share=" + StorageSharing.getShareCode(permutation));
+		}
+		//textbox.setValue(Document.get().getURL() + "?share=" + StorageSharing.getShareCode(permutation));
 		textbox.getElement().getStyle().setWidth(95, Unit.PCT);
 		
 		add(textbox, getElement());
