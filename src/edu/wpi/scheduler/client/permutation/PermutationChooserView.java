@@ -15,6 +15,7 @@ import edu.wpi.scheduler.client.controller.StudentSchedule;
 import edu.wpi.scheduler.client.courseselection.CourseAddAnimation;
 import edu.wpi.scheduler.client.controller.SchedulePermutation;
 import edu.wpi.scheduler.client.storage.StorageSharing;
+import edu.wpi.scheduler.client.storage.StorageStudentSchedule;
 
 public class PermutationChooserView extends Composite implements FavoriteEventHandler {
 
@@ -70,19 +71,10 @@ public class PermutationChooserView extends Composite implements FavoriteEventHa
 		studentSchedule.addFavoriteHandler(this);
 		permutationController.setSelectedSection(null);
 		
-//		//try to load permutation from share code if exists
-//		console("trying to load share code");
-//		try {
-//			String shareCode = com.google.gwt.user.client.Window.Location.getParameter("share");
-//			console("share code: " + shareCode);
-//			SchedulePermutation permutation = StorageSharing.getPermutation(shareCode);
-//			permutationController.selectPermutation(permutation);
-//		}catch (NullPointerException e) {
-//			//no share code... do nothing
-//			console("caught null pointer exception");
-//		}
+		update();	
 		
-		update();		
+		//load favorites from local storage here since FavoriteHandler isn't initialized until this point
+		StorageStudentSchedule.loadFavorites(studentSchedule);
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package edu.wpi.scheduler.client.storage;
 
+import java.util.Arrays;
+
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JsArrayString;
@@ -9,6 +11,7 @@ import com.google.gwt.storage.client.Storage;
 import com.google.gwt.user.client.Window;
 
 import edu.wpi.scheduler.client.Scheduler;
+import edu.wpi.scheduler.client.controller.SchedulePermutation;
 import edu.wpi.scheduler.client.controller.SectionProducer;
 import edu.wpi.scheduler.client.controller.StudentSchedule;
 import edu.wpi.scheduler.shared.model.Course;
@@ -51,6 +54,50 @@ public class StorageStudentSchedule {
 		if (localStorage != null) {
 			JSONArray jsonArr = new JSONArray(sections);
 			localStorage.setItem("savedCourse", jsonArr.toString());
+		}
+	}
+	
+	//save all favorites to local storage
+	public static void saveFavorites(StudentSchedule schedule) {
+		
+		String[] permutations = new String[schedule.favoritePermutations.size()];
+		
+		for(int i = 0; i < schedule.favoritePermutations.size(); i++) {
+			SchedulePermutation permutation = schedule.favoritePermutations.get(i);
+			String shareCode = StorageSharing.getShareCode(permutation);
+			permutations[i] = shareCode;
+		}
+		
+		String permutationsString = "";
+		for(int i = 0; i < permutations.length; i++) {
+			permutationsString = permutationsString + permutations[i] + ",";
+			//console("PS: " + permutationsString);
+		}
+		
+		Storage localStorage = Storage.getLocalStorageIfSupported();
+
+		if (localStorage != null) {
+			localStorage.setItem("favorites", permutationsString);
+		}
+	}
+	
+	//load all favorites from local storage
+	public static void loadFavorites(StudentSchedule schedule) {
+		Storage localStorage = Storage.getLocalStorageIfSupported();
+
+		if (localStorage == null)
+			return;
+		
+		String permutationsString = localStorage.getItem("favorites");
+
+		if (permutationsString == null)
+			return;
+		
+		String[] permutations = permutationsString.split(",");
+		
+		for(int i = 0; i < permutations.length; i++) {
+			SchedulePermutation permutation = StorageSharing.getPermutation(permutations[i]);
+			schedule.loadFavorite(permutation);
 		}
 	}
 

@@ -114,7 +114,20 @@ public class StudentSchedule implements HasHandlers
 		return false;
 	}
 
+	//add new favorite
 	public void addFavorite(SchedulePermutation permutation) {
+		if (containsFavorite(permutation))
+			return;
+
+		this.favoritePermutations.add(permutation);
+
+		fireEvent(new FavoriteEvent(FavoriteEventType.ADD));
+		
+		StorageStudentSchedule.saveFavorites(this);
+	}
+	
+	//load favorite from storage
+	public void loadFavorite(SchedulePermutation permutation) {
 		if (containsFavorite(permutation))
 			return;
 
@@ -129,6 +142,7 @@ public class StudentSchedule implements HasHandlers
 			if (perm.equals(permutation)) {
 				iter.remove();
 				fireEvent(new FavoriteEvent(FavoriteEventType.REMOVE));
+				StorageStudentSchedule.saveFavorites(this);
 				return;
 			}
 		}
