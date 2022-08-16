@@ -90,7 +90,7 @@ public class StorageStudentSchedule {
 		
 		String permutationsString = localStorage.getItem("favorites");
 
-		if (permutationsString == null)
+		if (permutationsString == null || permutationsString.isEmpty())
 			return;
 		
 		String[] permutations = permutationsString.split(",");
