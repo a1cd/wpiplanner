@@ -6,6 +6,11 @@ import java.util.logging.Logger;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Position;
 import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
@@ -36,7 +41,11 @@ public class MainView extends Composite {
 	TabList tabList;
 	
 	@UiField
+	Label yearLabel;
+	
+	@UiField
 	Label updatedLabel;
+	
 
 	public MainView( final StudentSchedule studentSchedule, ScheduleDB db) {
 		tabList = new TabList(this, studentSchedule);
@@ -53,12 +62,31 @@ public class MainView extends Composite {
 		getElement().getStyle().setBottom(0, Unit.PX);
 		getElement().getStyle().setPosition(Position.ABSOLUTE);
 		
-		String test = "Schedule Data Refreshed: " + db.generated;
+		//read year header from "yearHeader.txt"
+		try {
+			new RequestBuilder(RequestBuilder.GET, "yearHeader.txt").sendRequest("", new RequestCallback() {
+				@Override
+				public void onResponseReceived(Request req, Response resp) {
+					String text = resp.getText();
+					Logger logger = Logger.getLogger("logger");
+					logger.log(Level.SEVERE, "text: " + text);
+					yearLabel.setText(text);
+				}
+				
+				@Override
+				public void onError(Request res, Throwable throwable) {
+					Logger logger = Logger.getLogger("logger");
+					logger.log(Level.SEVERE, "Unable to read yearHeader.txt");
+				}
+			});
+		} catch (RequestException e) {
+			Logger logger = Logger.getLogger("logger");
+			logger.log(Level.SEVERE, "Unable to request yearHeader.txt");
+		}
 		
-		Logger logger = Logger.getLogger("logger");
-		logger.log(Level.SEVERE, test);
+		String refreshTimestamp = "Schedule Data Refreshed: " + db.generated;
 		
-		updatedLabel.setText(test);
+		updatedLabel.setText(refreshTimestamp);
 		
 	}
 
@@ -66,7 +94,6 @@ public class MainView extends Composite {
 		bodyPanel.remove(bodyPanel.getWidget());
 		bodyPanel.add(body);
 	}
-	
 	
 
 }
