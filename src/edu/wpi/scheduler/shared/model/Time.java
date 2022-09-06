@@ -36,10 +36,14 @@ public class Time implements Comparable<Time>, Serializable {
 		if (!meridian && this.hour != 12) {
 			this.hour += 12;
 		}
-
 		assertValidTime();
 	}
 
+	public static native void console(String text)
+	/*-{
+	    console.log(text);
+	}-*/;
+	
 	private void assertValidTime() {
 		if (hour < 0 || hour >= 24 || minutes < 0 || minutes >= 60) {
 			throw new IllegalArgumentException("Input times is not within bounds.");
@@ -118,13 +122,18 @@ public class Time implements Comparable<Time>, Serializable {
 			hour += 1;
 			minutes -= 60;
 		}
+		// Deal with minutes underflow
+		while(minutes < 0) {
+			hour -= 1;
+			minutes += 60;
+		}
 		// Deal with hour overflow
 		while(hour >= 24)
 		{
 			hour -= 24;
 		}
 		// Time should be valid
-		assertValidTime();
+		//assertValidTime();
 		return this;
 	}
 

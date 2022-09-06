@@ -14,6 +14,12 @@ public class TimeConflictProblem extends AbstractProblem
 	ScheduleProducer parent;
 	Section section;
 
+	public static native void console(String text)
+	/*-{
+	    console.log(text);
+	}-*/;
+	
+	
 	public TimeConflictProblem(ScheduleProducer parent, Section section) 
 	{
 		this.section = section;

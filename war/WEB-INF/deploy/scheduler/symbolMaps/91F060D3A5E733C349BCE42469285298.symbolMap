@@ -1794,7 +1794,7 @@ RC,com.google.gwt.lang.ClassLiteralHolder::Lcom_google_web_bindery_event_shared_
 SC,com.google.gwt.lang.ClassLiteralHolder::Lcom_google_web_bindery_event_shared_UmbrellaException_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Lcom_google_web_bindery_event_shared_UmbrellaException_2_classLit,com/google/web/bindery/event/shared/UmbrellaException.java,28,-1
 TC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_IncomingAnimation_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_IncomingAnimation_2_classLit,edu/wpi/scheduler/client/IncomingAnimation.java,11,-1
 UC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_LoadSchedule_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_LoadSchedule_2_classLit,edu/wpi/scheduler/client/LoadSchedule.java,16,-1
-VC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_MainView$1_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_MainView$1_2_classLit,edu/wpi/scheduler/client/MainView.java,66,-1
+VC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_MainView$1_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_MainView$1_2_classLit,edu/wpi/scheduler/client/MainView.java,67,-1
 WC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_MainView_1MainViewUiBinderImpl$Widgets_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_MainView_1MainViewUiBinderImpl$Widgets_2_classLit,gen/edu/wpi/scheduler/client/MainView_MainViewUiBinderImpl.java,22,-1
 XC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_MainView_1MainViewUiBinderImpl_1GenBundle_1default_1InlineClientBundleGenerator$1_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_MainView_1MainViewUiBinderImpl_1GenBundle_1default_1InlineClientBundleGenerator$1_2_classLit,gen/edu/wpi/scheduler/client/MainView_MainViewUiBinderImpl_GenBundle_default_InlineClientBundleGenerator.java,9,-1
 YC,com.google.gwt.lang.ClassLiteralHolder::Ledu_wpi_scheduler_client_MainView_1MainViewUiBinderImpl_1GenBundle_1default_1InlineClientBundleGenerator_2_classLit,com.google.gwt.lang.ClassLiteralHolder,Ledu_wpi_scheduler_client_MainView_1MainViewUiBinderImpl_1GenBundle_1default_1InlineClientBundleGenerator_2_classLit,gen/edu/wpi/scheduler/client/MainView_MainViewUiBinderImpl_GenBundle_default_InlineClientBundleGenerator.java,6,-1
@@ -3779,16 +3779,16 @@ f$,edu.wpi.scheduler.client.LoadSchedule::onReadyStateChange(Lcom/google/gwt/xhr
 g$,edu.wpi.scheduler.client.LoadSchedule::progressUpdate(Ledu/wpi/scheduler/client/ProgressEvent;)V,edu.wpi.scheduler.client.LoadSchedule,progressUpdate,edu/wpi/scheduler/client/LoadSchedule.java,44,0
 c,edu.wpi.scheduler.client.LoadSchedule::xmlHttpRequest,edu.wpi.scheduler.client.LoadSchedule,xmlHttpRequest,edu/wpi/scheduler/client/LoadSchedule.java,18,-1
 MainView,,edu.wpi.scheduler.client.MainView,,edu/wpi/scheduler/client/MainView.java,26,-1
-h$,edu.wpi.scheduler.client.MainView::$setBody(Ledu/wpi/scheduler/client/MainView;Lcom/google/gwt/user/client/ui/Widget;)V,edu.wpi.scheduler.client.MainView,$setBody,edu/wpi/scheduler/client/MainView.java,93,0
+h$,edu.wpi.scheduler.client.MainView::$setBody(Ledu/wpi/scheduler/client/MainView;Lcom/google/gwt/user/client/ui/Widget;)V,edu.wpi.scheduler.client.MainView,$setBody,edu/wpi/scheduler/client/MainView.java,91,0
 i$,edu.wpi.scheduler.client.MainView::MainView(Ledu/wpi/scheduler/client/controller/StudentSchedule;Ledu/wpi/scheduler/shared/model/ScheduleDB;) <init>,edu.wpi.scheduler.client.MainView,MainView,edu/wpi/scheduler/client/MainView.java,50,0
 a,edu.wpi.scheduler.client.MainView::bodyPanel,edu.wpi.scheduler.client.MainView,bodyPanel,edu/wpi/scheduler/client/MainView.java,38,-1
 b,edu.wpi.scheduler.client.MainView::tabList,edu.wpi.scheduler.client.MainView,tabList,edu/wpi/scheduler/client/MainView.java,41,-1
 c,edu.wpi.scheduler.client.MainView::updatedLabel,edu.wpi.scheduler.client.MainView,updatedLabel,edu/wpi/scheduler/client/MainView.java,47,-1
 d,edu.wpi.scheduler.client.MainView::yearLabel,edu.wpi.scheduler.client.MainView,yearLabel,edu/wpi/scheduler/client/MainView.java,44,-1
-MainView$1,,edu.wpi.scheduler.client.MainView$1,,edu/wpi/scheduler/client/MainView.java,66,-1
-j$,edu.wpi.scheduler.client.MainView$1::$onError(Ledu/wpi/scheduler/client/MainView$1;Lcom/google/gwt/http/client/Request;Ljava/lang/Throwable;)V,edu.wpi.scheduler.client.MainView$1,$onError,edu/wpi/scheduler/client/MainView.java,76,0
-k$,edu.wpi.scheduler.client.MainView$1::MainView$1(Ledu/wpi/scheduler/client/MainView;) <init>,edu.wpi.scheduler.client.MainView$1,MainView$1,edu/wpi/scheduler/client/MainView.java,66,0
-a,edu.wpi.scheduler.client.MainView$1::this$01,edu.wpi.scheduler.client.MainView$1,this$01,edu/wpi/scheduler/client/MainView.java,66,-1
+MainView$1,,edu.wpi.scheduler.client.MainView$1,,edu/wpi/scheduler/client/MainView.java,67,-1
+j$,edu.wpi.scheduler.client.MainView$1::$onError(Ledu/wpi/scheduler/client/MainView$1;Lcom/google/gwt/http/client/Request;Ljava/lang/Throwable;)V,edu.wpi.scheduler.client.MainView$1,$onError,edu/wpi/scheduler/client/MainView.java,75,0
+k$,edu.wpi.scheduler.client.MainView$1::MainView$1(Ledu/wpi/scheduler/client/MainView;) <init>,edu.wpi.scheduler.client.MainView$1,MainView$1,edu/wpi/scheduler/client/MainView.java,67,0
+a,edu.wpi.scheduler.client.MainView$1::this$01,edu.wpi.scheduler.client.MainView$1,this$01,edu/wpi/scheduler/client/MainView.java,67,-1
 MainView_MainViewUiBinderImpl$Widgets,,edu.wpi.scheduler.client.MainView_MainViewUiBinderImpl$Widgets,,gen/edu/wpi/scheduler/client/MainView_MainViewUiBinderImpl.java,22,-1
 l$,edu.wpi.scheduler.client.MainView_MainViewUiBinderImpl$Widgets::$build_layoutPanel(Ledu/wpi/scheduler/client/MainView_MainViewUiBinderImpl$Widgets;)Lcom/google/gwt/user/client/ui/DockLayoutPanel;,edu.wpi.scheduler.client.MainView_MainViewUiBinderImpl$Widgets,$build_layoutPanel,gen/edu/wpi/scheduler/client/MainView_MainViewUiBinderImpl.java,82,0
 m$,edu.wpi.scheduler.client.MainView_MainViewUiBinderImpl$Widgets::MainView_MainViewUiBinderImpl$Widgets(Ledu/wpi/scheduler/client/MainView_MainViewUiBinderImpl;Ledu/wpi/scheduler/client/MainView;) <init>,edu.wpi.scheduler.client.MainView_MainViewUiBinderImpl$Widgets,MainView_MainViewUiBinderImpl$Widgets,gen/edu/wpi/scheduler/client/MainView_MainViewUiBinderImpl.java,26,0
@@ -4138,10 +4138,10 @@ c,edu.wpi.scheduler.client.generator.ScheduleProducer$SearchState::sections,edu.
 d,edu.wpi.scheduler.client.generator.ScheduleProducer$SearchState::solutions,edu.wpi.scheduler.client.generator.ScheduleProducer$SearchState,solutions,edu/wpi/scheduler/client/generator/ScheduleProducer.java,62,-1
 e,edu.wpi.scheduler.client.generator.ScheduleProducer$SearchState::this$01,edu.wpi.scheduler.client.generator.ScheduleProducer$SearchState,this$01,edu/wpi/scheduler/client/generator/ScheduleProducer.java,60,-1
 TimeConflictProblem,,edu.wpi.scheduler.client.generator.TimeConflictProblem,,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,12,-1
-k3,edu.wpi.scheduler.client.generator.TimeConflictProblem::TimeConflictProblem(Ledu/wpi/scheduler/client/generator/ScheduleProducer;Ledu/wpi/scheduler/shared/model/Section;) <init>,edu.wpi.scheduler.client.generator.TimeConflictProblem,TimeConflictProblem,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,17,0
-l3,edu.wpi.scheduler.client.generator.TimeConflictProblem::applySolution(Ledu/wpi/scheduler/client/controller/StudentSchedule;)V,edu.wpi.scheduler.client.generator.TimeConflictProblem,applySolution,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,51,0
-m3,edu.wpi.scheduler.client.generator.TimeConflictProblem::getDescription()Ljava/lang/String;,edu.wpi.scheduler.client.generator.TimeConflictProblem,getDescription,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,33,0
-n3,edu.wpi.scheduler.client.generator.TimeConflictProblem::getTitle()Ljava/lang/String;,edu.wpi.scheduler.client.generator.TimeConflictProblem,getTitle,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,24,0
+k3,edu.wpi.scheduler.client.generator.TimeConflictProblem::TimeConflictProblem(Ledu/wpi/scheduler/client/generator/ScheduleProducer;Ledu/wpi/scheduler/shared/model/Section;) <init>,edu.wpi.scheduler.client.generator.TimeConflictProblem,TimeConflictProblem,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,23,0
+l3,edu.wpi.scheduler.client.generator.TimeConflictProblem::applySolution(Ledu/wpi/scheduler/client/controller/StudentSchedule;)V,edu.wpi.scheduler.client.generator.TimeConflictProblem,applySolution,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,57,0
+m3,edu.wpi.scheduler.client.generator.TimeConflictProblem::getDescription()Ljava/lang/String;,edu.wpi.scheduler.client.generator.TimeConflictProblem,getDescription,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,39,0
+n3,edu.wpi.scheduler.client.generator.TimeConflictProblem::getTitle()Ljava/lang/String;,edu.wpi.scheduler.client.generator.TimeConflictProblem,getTitle,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,30,0
 a,edu.wpi.scheduler.client.generator.TimeConflictProblem::parent,edu.wpi.scheduler.client.generator.TimeConflictProblem,parent,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,14,-1
 b,edu.wpi.scheduler.client.generator.TimeConflictProblem::section,edu.wpi.scheduler.client.generator.TimeConflictProblem,section,edu/wpi/scheduler/client/generator/TimeConflictProblem.java,15,-1
 CourseItem,,edu.wpi.scheduler.client.permutation.CourseItem,,edu/wpi/scheduler/client/permutation/CourseItem.java,23,-1
@@ -4655,18 +4655,18 @@ w8,edu.wpi.scheduler.shared.model.Term::getTermByName(Ljava/lang/String;)Ledu/wp
 a,edu.wpi.scheduler.shared.model.Term::name,edu.wpi.scheduler.shared.model.Term,name,edu/wpi/scheduler/shared/model/Term.java,9,-1
 x8,edu.wpi.scheduler.shared.model.Term::values()[Ledu/wpi/scheduler/shared/model/Term;,edu.wpi.scheduler.shared.model.Term,values,edu/wpi/scheduler/shared/model/Term.java,3,0
 Time,,edu.wpi.scheduler.shared.model.Time,,edu/wpi/scheduler/shared/model/Time.java,6,-1
-y8,edu.wpi.scheduler.shared.model.Time::$assertValidTime(Ledu/wpi/scheduler/shared/model/Time;)V,edu.wpi.scheduler.shared.model.Time,$assertValidTime,edu/wpi/scheduler/shared/model/Time.java,43,0
-z8,edu.wpi.scheduler.shared.model.Time::$compareTo(Ledu/wpi/scheduler/shared/model/Time;Ledu/wpi/scheduler/shared/model/Time;)I,edu.wpi.scheduler.shared.model.Time,$compareTo,edu/wpi/scheduler/shared/model/Time.java,83,0
-A8,edu.wpi.scheduler.shared.model.Time::$getValue(Ledu/wpi/scheduler/shared/model/Time;)D,edu.wpi.scheduler.shared.model.Time,$getValue,edu/wpi/scheduler/shared/model/Time.java,74,0
-B8,edu.wpi.scheduler.shared.model.Time::$increment(Ledu/wpi/scheduler/shared/model/Time;II)Ledu/wpi/scheduler/shared/model/Time;,edu.wpi.scheduler.shared.model.Time,$increment,edu/wpi/scheduler/shared/model/Time.java,111,0
-C8,edu.wpi.scheduler.shared.model.Time::$toString(Ledu/wpi/scheduler/shared/model/Time;Z)Ljava/lang/String;,edu.wpi.scheduler.shared.model.Time,$toString,edu/wpi/scheduler/shared/model/Time.java,54,0
+y8,edu.wpi.scheduler.shared.model.Time::$assertValidTime(Ledu/wpi/scheduler/shared/model/Time;)V,edu.wpi.scheduler.shared.model.Time,$assertValidTime,edu/wpi/scheduler/shared/model/Time.java,47,0
+z8,edu.wpi.scheduler.shared.model.Time::$compareTo(Ledu/wpi/scheduler/shared/model/Time;Ledu/wpi/scheduler/shared/model/Time;)I,edu.wpi.scheduler.shared.model.Time,$compareTo,edu/wpi/scheduler/shared/model/Time.java,87,0
+A8,edu.wpi.scheduler.shared.model.Time::$getValue(Ledu/wpi/scheduler/shared/model/Time;)D,edu.wpi.scheduler.shared.model.Time,$getValue,edu/wpi/scheduler/shared/model/Time.java,78,0
+B8,edu.wpi.scheduler.shared.model.Time::$increment(Ledu/wpi/scheduler/shared/model/Time;II)Ledu/wpi/scheduler/shared/model/Time;,edu.wpi.scheduler.shared.model.Time,$increment,edu/wpi/scheduler/shared/model/Time.java,115,0
+C8,edu.wpi.scheduler.shared.model.Time::$toString(Ledu/wpi/scheduler/shared/model/Time;Z)Ljava/lang/String;,edu.wpi.scheduler.shared.model.Time,$toString,edu/wpi/scheduler/shared/model/Time.java,58,0
 D8,edu.wpi.scheduler.shared.model.Time::Time(II) <init>,edu.wpi.scheduler.shared.model.Time,Time,edu/wpi/scheduler/shared/model/Time.java,15,0
 E8,edu.wpi.scheduler.shared.model.Time::Time(Ljava/lang/String;) <init>,edu.wpi.scheduler.shared.model.Time,Time,edu/wpi/scheduler/shared/model/Time.java,27,0
-F8,edu.wpi.scheduler.shared.model.Time::compareTo(Ljava/lang/Object;)I,edu.wpi.scheduler.shared.model.Time,compareTo,edu/wpi/scheduler/shared/model/Time.java,83,0
-G8,edu.wpi.scheduler.shared.model.Time::equals(Ljava/lang/Object;)Z,edu.wpi.scheduler.shared.model.Time,equals,edu/wpi/scheduler/shared/model/Time.java,96,0
+F8,edu.wpi.scheduler.shared.model.Time::compareTo(Ljava/lang/Object;)I,edu.wpi.scheduler.shared.model.Time,compareTo,edu/wpi/scheduler/shared/model/Time.java,87,0
+G8,edu.wpi.scheduler.shared.model.Time::equals(Ljava/lang/Object;)Z,edu.wpi.scheduler.shared.model.Time,equals,edu/wpi/scheduler/shared/model/Time.java,100,0
 a,edu.wpi.scheduler.shared.model.Time::hour,edu.wpi.scheduler.shared.model.Time,hour,edu/wpi/scheduler/shared/model/Time.java,8,-1
 b,edu.wpi.scheduler.shared.model.Time::minutes,edu.wpi.scheduler.shared.model.Time,minutes,edu/wpi/scheduler/shared/model/Time.java,9,-1
-H8,edu.wpi.scheduler.shared.model.Time::toString()Ljava/lang/String;,edu.wpi.scheduler.shared.model.Time,toString,edu/wpi/scheduler/shared/model/Time.java,50,0
+H8,edu.wpi.scheduler.shared.model.Time::toString()Ljava/lang/String;,edu.wpi.scheduler.shared.model.Time,toString,edu/wpi/scheduler/shared/model/Time.java,54,0
 TimeCell,,edu.wpi.scheduler.shared.model.TimeCell,,edu/wpi/scheduler/shared/model/TimeCell.java,3,-1
 J8,edu.wpi.scheduler.shared.model.TimeCell::$clinit()V,edu.wpi.scheduler.shared.model.TimeCell,$clinit,edu/wpi/scheduler/shared/model/TimeCell.java,3,0
 K8,edu.wpi.scheduler.shared.model.TimeCell::$dayToGrid(Ledu/wpi/scheduler/shared/model/TimeCell;)I,edu.wpi.scheduler.shared.model.TimeCell,$dayToGrid,edu/wpi/scheduler/shared/model/TimeCell.java,29,0

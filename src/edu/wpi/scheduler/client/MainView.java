@@ -68,8 +68,6 @@ public class MainView extends Composite {
 				@Override
 				public void onResponseReceived(Request req, Response resp) {
 					String text = resp.getText();
-					Logger logger = Logger.getLogger("logger");
-					logger.log(Level.SEVERE, "text: " + text);
 					yearLabel.setText(text);
 				}
 				

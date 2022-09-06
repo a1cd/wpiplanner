@@ -300,7 +300,21 @@ public class ScheduleProducer {
 				// For each day
 				for(DayOfWeek d : p.days)
 				{
-					Time periodTime = new Time(p.startTime.hour, p.startTime.minutes);
+					//for the purposes of resolving conflicts, all periods must start on :00 or :30
+					//if they don't, adjust the start times to reflect the blocks they fall in:
+					
+					int newStartMinutes;
+					if(p.startTime.minutes%30 != 0) {    //if start time IS NOT on :00 or :30
+						if(p.startTime.minutes-30 < 0) {   //if start time is between :00 and :30
+							newStartMinutes = 0;
+						}else {   //if start time is between :30 and :60
+							newStartMinutes = 30;
+						}
+					}else {
+						newStartMinutes = p.startTime.minutes;
+					}
+					//Time periodTime = new Time(p.startTime.hour, p.startTime.minutes);
+					Time periodTime = new Time(p.startTime.hour, newStartMinutes);
 					List<Time> chosenTimes = controller.studentTermTimes.getTimesForTerm(t).getTimes(d);
 					// For each time cell
 					while(periodTime.compareTo(p.endTime) < 0)
