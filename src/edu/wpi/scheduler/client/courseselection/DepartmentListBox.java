@@ -44,7 +44,7 @@ public class DepartmentListBox extends ListBox {
 			new AcademicGroup("Language", "GN", "AB", "CN", "ESL", "ISE", "SP"),
 			new AcademicGroup("Humanities", "PY", "AR", "HI", "HU", "MU", "RE", "TH", "WR", "EN", "INTL"),
 			new AcademicGroup("Social Science", "ECON", "SS", "PSY", "DEV", "ENV", "GOV", "SS", "SD", "SOC", "STS"),
-			new AcademicGroup("Business", "BUS", "ETR", "FIN", "MIS", "MKT", "OBC")
+			new AcademicGroup("Business", "BUS", "ETR", "FIN", "MIS", "MKT", "OBC", "ACC")
 			);
 
 	public DepartmentListBox(StudentSchedule studentSchedule) {
