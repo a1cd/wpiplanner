@@ -12,8 +12,8 @@ The deployed production version of the WPI Planner may be found at https://plann
 
 The development version may be found at https://jmckeen8.github.io/wpiplanner/.
 
-Based on the WPI Scheduler IQP application written by: Henrique "Nican" Polido, Ryan Anthony, Douglas Lally:
-[GitHub Repository](https://github.com/Nican/wpischeduler)
+Based on the WPI Scheduler IQP application written by: Henrique "Nican" Polido, Ryan Anthony, Douglas Lally:<br>
+[GitHub Repository](https://github.com/Nican/wpischeduler)<br>
 [Digital WPI Project Listing](https://digital.wpi.edu/show/zw12z591f)
 
 Modifications by: [Josh McKeen](https://github.com/Jmckeen8) and [Nick Markou](https://github.com/NicholasMarkou)
