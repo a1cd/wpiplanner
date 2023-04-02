@@ -2,24 +2,20 @@
 
 For implementation: use contents of the "war" folder
 
-Based on the WPI Scheduler IQP application written by: Henrique "Nican" Polido, Ryan Anthony, Douglas Lally
+This repository hosts the actively maintained version of the WPI Planner, which has been modified to display schedule data from Workday instead of Banner. 
 
-Modifications by: Josh McKeen and Nick Markou
+The version of Planner in this repository works in conjunction with the ["WorkdayToPlannerConverter"](https://github.com/Jmckeen8/WorkdayToPlannerConverter) tool, which generates the necessary "new.schedb" file. Other minor modifications have been made to the Planner application itself, including additional color coding to indicate course availability, warning symbols for closed/waitlisted courses, sharable schedule links, and favorited schedules that persist between sessions. 
 
-This is a modification of the data source used by the "old" WPI Planner/Scheduler application to allow the application to work with the 2021-2022 and beyond class schedules. These schedules are now created using Workday, WPI's new Student Information System which is replacing Banner/Bannerweb. 
+The original schedule data source is a [JSON output](https://courselistings.wpi.edu/assets/prod-data-raw.json) of the "Course For Rainbow Sheets 2.0 - WPI" Workday report, which is also used by WPI's public [Course Listings website](https://courselistings.wpi.edu/). 
 
-The schedule data source is a JSON feed provided by WPI's new course listings website [courselistings.wpi.edu](https://courselistings.wpi.edu/). This version of the Planner is being hosted on Github Pages and the schedule data should automatically update approximately every 15 minutes using Github Actions. 
+The deployed production version of the WPI Planner may be found at https://planner.wpi.edu/.
 
-The live version of the planner can be found at [jmckeen8.github.io/wpiplanner/](https://jmckeen8.github.io/wpiplanner/)
+The development version may be found at https://jmckeen8.github.io/wpiplanner/.
 
-The data provided by the JSON feed is converted to the XML format desired by the Planner application using a converter application I've written, which has its own repository [here](https://github.com/Jmckeen8/WorkdayToPlannerConverter). Other minor modifications have been made to the Planner application itself, namely to show seat totals by course component when viewing schedules instead of showing a single set of seat totals for an entire section.
+Based on the WPI Scheduler IQP application written by: Henrique "Nican" Polido, Ryan Anthony, Douglas Lally:
+[GitHub Repository](https://github.com/Nican/wpischeduler)
+[Digital WPI Project Listing](https://digital.wpi.edu/show/zw12z591f)
 
-Questions/Feedback/Bug Reports:  
-Josh:  
-Email: jdmckeen@wpi.edu  
-Discord: Jmckeen#9470  
-Reddit: u/Jmckeen8  
-  
-Nick:  
-Email: nmmarkou@wpi.edu  
-Discord: nMM456#9212  
+Modifications by: [Josh McKeen](https://github.com/Jmckeen8) and [Nick Markou](https://github.com/NicholasMarkou)
+
+This web application is currently maintained by WPI Information Technology Services. For support, questions, or feedback please contact [WPI ITS](https://hub.wpi.edu/Help).
