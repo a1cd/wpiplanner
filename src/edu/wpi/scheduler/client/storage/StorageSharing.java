@@ -33,10 +33,10 @@ public class StorageSharing {
 	private static String getCrnHex(int crn) {
 		String hex = Integer.toHexString(crn).toUpperCase();
 
-		while (hex.length() < 6)
+		while (hex.length() < 7)
 			hex = "0" + hex;
 
-		if (hex.length() > 6)
+		if (hex.length() > 7)
 			Window.alert("Error! CRN is too large" + crn);
 
 		return hex;
@@ -48,8 +48,8 @@ public class StorageSharing {
 
 		SchedulePermutation permutation = new SchedulePermutation();
 
-		for (int i = 2; i < code.length(); i += 6) {
-			int crn = Integer.parseInt(code.substring(i, i + 6), 16);
+		for (int i = 2; i < code.length(); i += 7) {
+			int crn = Integer.parseInt(code.substring(i, i + 7), 16);
 
 			Section section = Scheduler.getDatabase().getSectionByCRN(crn);
 

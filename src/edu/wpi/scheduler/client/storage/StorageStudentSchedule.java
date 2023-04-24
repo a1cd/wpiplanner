@@ -180,8 +180,8 @@ public class StorageStudentSchedule {
 		assert (shareCode.substring(0, 2).equals("01"));
 
 
-		for (int i = 2; i < shareCode.length(); i += 6) {
-			int crn = Integer.parseInt(shareCode.substring(i, i + 6), 16);
+		for (int i = 2; i < shareCode.length(); i += 7) {
+			int crn = Integer.parseInt(shareCode.substring(i, i + 7), 16);
 
 			Section thisSection = Scheduler.getDatabase().getSectionByCRN(crn);
 
