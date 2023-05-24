@@ -36,9 +36,7 @@ public class StorageSharing {
 	}
 
 	private static String getCrnHex(long crn) {
-		console("long: " + crn);
 		String hex = Long.toHexString(crn).toUpperCase();
-		console("hex string: " + hex);
 
 		while (hex.length() < 18)
 			hex = "0" + hex;

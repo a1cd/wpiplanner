@@ -125,15 +125,15 @@ public class StorageStudentSchedule {
 			return;
 
 		//try to load permutation from share code if exists
-		console("trying to load share code");
+		//console("trying to load share code");
 		try {
 			String shareCode = com.google.gwt.user.client.Window.Location.getParameter("share");
-			console("share code: " + shareCode);
+			//console("share code: " + shareCode);
 			loadScheduleFromParam(schedule, shareCode);
 			return;
 		}catch (Exception e) {
 			//no share code... do nothing
-			console("caught null pointer exception -- no share code");
+			//console("caught null pointer exception -- no share code");
 		}
 
 		String depList = localStorage.getItem("savedCourse");
