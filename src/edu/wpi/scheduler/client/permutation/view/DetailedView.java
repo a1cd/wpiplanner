@@ -61,8 +61,8 @@ public class DetailedView extends ScrollPanel implements PermutationSelectEventH
 		cellFormatter.setVerticalAlignment(1, 0, HasVerticalAlignment.ALIGN_TOP);
 		cellFormatter.setVerticalAlignment(1, 1, HasVerticalAlignment.ALIGN_TOP);
 
-		cellFormatter.setWidth(1, 0, "50%");
-		cellFormatter.setWidth(1, 1, "50%");
+		cellFormatter.setWidth(1, 0, "30%");
+		cellFormatter.setWidth(1, 1, "70%");
 		
 		String html = "<h3>" + section.course.toString() + "</h3>Section(s): " + section.number;
 //		html += "<br>Seats available: " + section.seatsAvailable + "/" + section.seats;
