@@ -16,6 +16,11 @@ import edu.wpi.scheduler.shared.model.Section;
 import edu.wpi.scheduler.shared.model.Time;
 
 public class SchedXMLParser {
+	
+	public static native void console(String text)
+	/*-{
+	    console.log(text);
+	}-*/;
 
 	public ScheduleDB parse(Document document) {
 		ScheduleDB scheduleDB = new ScheduleDB();
@@ -105,7 +110,7 @@ public class SchedXMLParser {
 	private Section readSectionNode(Course course, Element node) {
 		Section section = new Section(course);
 
-		section.crn = Integer.parseInt(node.getAttribute("crn"));
+		section.crn = Long.parseLong(node.getAttribute("crn"));
 		section.number = node.getAttribute("number");
 		section.seats = Integer.parseInt(node.getAttribute("seats"));
 		section.seatsAvailable = Integer.parseInt(node.getAttribute("availableseats"));

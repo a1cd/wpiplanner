@@ -17,7 +17,7 @@ public class Section implements Serializable {
 	/** Reference to parent course */
 	public Course course;
 	/** Course Registration Number */
-	public int crn;
+	public long crn;
 	/** Section number; e.g. A03 */
 	public String number;
 	/** Total seats for this section */

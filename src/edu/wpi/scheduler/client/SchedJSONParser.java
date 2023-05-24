@@ -17,6 +17,10 @@ import edu.wpi.scheduler.shared.model.Time;
 
 public class SchedJSONParser {
 	
+	public static native void console(String text)
+	/*-{
+	    console.log(text);
+	}-*/;
 	
 	public SchedJSONParser(){
 		
@@ -119,7 +123,7 @@ public class SchedJSONParser {
 	private static Section readSectionNode(Course course, JSONObject node) {
 		Section section = new Section(course);
 
-		section.crn = (int) node.get("crn").isNumber().doubleValue();
+		section.crn = (long) node.get("crn").isNumber().doubleValue();
 		section.number = node.get("number").isString().stringValue();
 		section.seats =  (int) node.get("seats").isNumber().doubleValue();
 		section.seatsAvailable = (int) node.get("availableseats").isNumber().doubleValue();

@@ -8,6 +8,11 @@ import edu.wpi.scheduler.client.controller.SchedulePermutation;
 import edu.wpi.scheduler.shared.model.Section;
 
 public class StorageSharing {
+	
+	public static native void console(String text)
+	/*-{
+	    console.log(text);
+	}-*/;
 
 	public static String getShareCode(SchedulePermutation permutation) {
 		assert (permutation.solutions.size() == 0);
@@ -30,13 +35,15 @@ public class StorageSharing {
 		return output;
 	}
 
-	private static String getCrnHex(int crn) {
-		String hex = Integer.toHexString(crn).toUpperCase();
+	private static String getCrnHex(long crn) {
+		console("long: " + crn);
+		String hex = Long.toHexString(crn).toUpperCase();
+		console("hex string: " + hex);
 
-		while (hex.length() < 7)
+		while (hex.length() < 18)
 			hex = "0" + hex;
 
-		if (hex.length() > 7)
+		if (hex.length() > 18)
 			Window.alert("Error! CRN is too large" + crn);
 
 		return hex;
@@ -48,8 +55,8 @@ public class StorageSharing {
 
 		SchedulePermutation permutation = new SchedulePermutation();
 
-		for (int i = 2; i < code.length(); i += 7) {
-			int crn = Integer.parseInt(code.substring(i, i + 7), 16);
+		for (int i = 2; i < code.length(); i += 18) {
+			long crn = Long.parseLong(code.substring(i, i + 18), 16);
 
 			Section section = Scheduler.getDatabase().getSectionByCRN(crn);
 

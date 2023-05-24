@@ -23,7 +23,7 @@ public class ScheduleDB implements Serializable {
 	 * @param crn The given course CRN
 	 * @return the section, or null if the section is not found.
 	 */
-	public Section getSectionByCRN( int crn ){
+	public Section getSectionByCRN( long crn ){
 		// If the section exists, return it
 		for( Department department : this.departments ){
 			for( Course course : department.courses ){
