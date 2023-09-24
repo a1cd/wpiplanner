@@ -16,6 +16,6 @@ Based on the WPI Scheduler IQP application written by: Henrique "Nican" Polido, 
 [GitHub Repository](https://github.com/Nican/wpischeduler)<br>
 [Digital WPI Project Listing](https://digital.wpi.edu/show/zw12z591f)
 
-Modifications by: [Josh McKeen](https://github.com/Jmckeen8) and [Nick Markou](https://github.com/NicholasMarkou)
+Modifications by: [Jordyn McKeen](https://github.com/Jmckeen8) and [Nick Markou](https://github.com/NicholasMarkou)
 
 This web application is currently maintained by WPI Information Technology Services. For support, questions, or feedback please contact [WPI ITS](https://hub.wpi.edu/Help).
