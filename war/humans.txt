@@ -6,7 +6,7 @@ Source code:
  - https://github.com/Nican/wpischeduler
 
 Updated for compatibility with Workday schedule data by:
- - Josh McKeen <jdmckeen@wpi.edu>
+ - Jordyn McKeen <jdmckeen@wpi.edu>
  - Nick Markou <nmmarkou@wpi.edu>
 Source code:
  - https://github.com/Jmckeen8/wpiplanner
