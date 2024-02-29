@@ -40,11 +40,11 @@ public class DepartmentListBox extends ListBox {
 
 	private static final List<AcademicGroup> groups = Arrays.asList(
 			new AcademicGroup("Science", "MA", "PH", "BB", "BCB", "CH", "CS", "GE", "DS", "IMGD", "MMS", "MPE", "MME", "NEU"),
-			new AcademicGroup("Engineering", "ECE", "RBE", "AREN", "BME", "CE", "CHE", "ES", "ME", "MFE", "MTE", "NSE", "OIE", "FP", "SYS", "AE"),
+			new AcademicGroup("Engineering", "ECE", "RBE", "AREN", "BME", "CE", "CHE", "ES", "ME", "MFE", "MTE", "NSE", "FP", "SYS", "AE"),
 			new AcademicGroup("Language", "GN", "AB", "CN", "ESL", "JP", "ISE", "SP"),
 			new AcademicGroup("Humanities", "PY", "AR", "HI", "HU", "MU", "RE", "TH", "WR", "EN", "INTL"),
 			new AcademicGroup("Social Science", "ECON", "SS", "PSY", "DEV", "ENV", "GOV", "SS", "SD", "SOC", "STS"),
-			new AcademicGroup("Business", "BUS", "ETR", "FIN", "MIS", "MKT", "OBC", "ACC")
+			new AcademicGroup("Business", "BUS", "ETR", "FIN", "MIS", "MKT", "OBC", "ACC", "OIE")
 			);
 
 	public DepartmentListBox(StudentSchedule studentSchedule) {
